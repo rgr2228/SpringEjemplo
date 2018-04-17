@@ -33,9 +33,22 @@
 			</property>
 		</bean>
 		
-		<bean id="ciudadDao" class="co.edu.udea.iw.dao.impl.CiudadDAOImpl">
+		<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+			<property name="dataSource" ref="dataSource"></property>
 			<property name="sessionFactory" ref="sessionFactory"></property>
 		</bean>
 		
+		<bean id="ciudadDao" class="co.edu.udea.iw.dao.impl.CiudadDAOHibernate">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="usuarioDao" class="co.edu.udea.iw.dao.impl.UsuarioDAOHibernate">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		<bean id="clienteDao" class="co.edu.udea.iw.dao.impl.ClienteDAOHibernate">
+			<property name="sessionFactory" ref="sessionFactory"></property>
+		</bean>
+		
+		<bean id="clienteBL" class="co.edu.udea.iw.bl.impl.ClienteBLImpl">
+		</bean>
 </beans>
 
