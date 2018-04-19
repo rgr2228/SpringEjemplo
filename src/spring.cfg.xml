@@ -50,5 +50,7 @@
 		
 		<bean id="clienteBL" class="co.edu.udea.iw.bl.impl.ClienteBLImpl">
 		</bean>
+		<bean id="usuarioBL" class="co.edu.udea.iw.bl.impl.UsuarioBLImpl">
+		</bean>
 </beans>
 

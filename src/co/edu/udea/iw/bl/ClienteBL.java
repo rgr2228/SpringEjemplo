@@ -13,5 +13,7 @@ public interface ClienteBL {
 	 * @throws IWDaoException
 	 */
 	public List<Cliente> obtener() throws IWDaoException;
+	public Cliente insertar(String cedula, String nombres, String apellidos, 
+			String email, String usuarioCrea) throws IWDaoException;
 	
 }

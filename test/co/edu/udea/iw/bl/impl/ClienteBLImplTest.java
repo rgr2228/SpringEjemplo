@@ -3,6 +3,7 @@ package co.edu.udea.iw.bl.impl;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Test;
@@ -14,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.udea.iw.bl.ClienteBL;
 import co.edu.udea.iw.dto.Cliente;
+import co.edu.udea.iw.dto.Usuario;
 import co.edu.udea.iw.exception.IWDaoException;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -33,6 +35,16 @@ public class ClienteBLImplTest {
 		}catch(IWDaoException e){
 			e.printStackTrace();
 			fail(e.getMessage());
+		}
+	}
+	
+	@Test
+	public void testInsertar() {
+		try {
+			clienteBL.insertar("1045024228", "Pedro", "Ramírez", "rgr2228@gmail.com", "rgr2228");
+		}catch(IWDaoException e){
+			e.printStackTrace();
+			fail(e.getMessage());		
 		}
 	}
 
