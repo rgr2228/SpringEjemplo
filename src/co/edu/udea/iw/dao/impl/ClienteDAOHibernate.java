@@ -91,8 +91,6 @@ public class ClienteDAOHibernate extends HibernateDaoSupport implements ClienteD
 			
 		}catch(HibernateException e){
 			throw new IWDaoException(e);
-		}finally{
-//			session.close();
 		}
 		
 		return clientes;

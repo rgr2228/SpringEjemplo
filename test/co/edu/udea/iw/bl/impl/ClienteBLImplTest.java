@@ -41,7 +41,7 @@ public class ClienteBLImplTest {
 	@Test
 	public void testInsertar() {
 		try {
-			clienteBL.insertar("1045024228", "Pedro", "Ramírez", "rgr2228@gmail.com", "rgr2228");
+			clienteBL.insertar("1045024228", "Pedro", "Ramirez", "rgr2228@gmail.com", "elver");
 		}catch(IWDaoException e){
 			e.printStackTrace();
 			fail(e.getMessage());		
